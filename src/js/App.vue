@@ -1,8 +1,19 @@
 <template>
   <div id="app">
-    <h1>My Todo App!</h1>
+    <div class="main">
+      <SideBar />
+      <Content />
+    </div>
   </div>
 </template>
 
 <script>
+  import SideBar from './components/SideBar'
+  import Content from './components/Content'
+
+  export default {
+    components: {
+      SideBar, Content
+    }
+  }
 </script>
