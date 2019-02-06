@@ -35,18 +35,11 @@ module.exports = {
         loader: 'html-loader'
       },
       {
-        test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          loaders: {
-            'scss': [
-              'vue-style-loader',
-              'style-loader',
-              'css-loader',
-              'sass-loader'
-            ]
-          }
-        }
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
       },
       {
         test: /\.scss$/,
@@ -56,6 +49,37 @@ module.exports = {
           'css-loader',
           'sass-loader'
         ]
+      },
+      {
+        test: /\.sass/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader?indentedSyntax'
+        ]
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            'scss': [
+              'vue-style-loader',
+              'style-loader',
+              'css-loader',
+              'sass-loader'
+            ],
+            'css': [
+              'vue-style-loader',
+              'css-loader'
+            ],
+            'sass': [
+              'vue-style-loader',
+              'css-loader',
+              'sass-loader?indentedSyntax'
+            ]
+          }
+        }
       },
       {
         test: /\.m?js$/,

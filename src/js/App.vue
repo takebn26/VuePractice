@@ -1,19 +1,15 @@
 <template>
   <div id="app">
-    <div class="main">
-      <SideBar />
-      <Content />
-    </div>
+    <Mypage />
   </div>
 </template>
 
 <script>
-  import SideBar from './components/SideBar'
-  import Content from './components/Content'
+  import Mypage from './components/mypages/Mypage'
 
   export default {
     components: {
-      SideBar, Content
+      Mypage
     }
   }
 </script>
